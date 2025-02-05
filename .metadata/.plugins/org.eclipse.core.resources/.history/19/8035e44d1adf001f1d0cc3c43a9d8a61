@@ -1,0 +1,33 @@
+package practice;
+import java.util.*;
+//Write a program to print all unique elements in the array.
+public class PracticeArray7 {
+	public static void main(String args[]) {
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Please enter the size of array:");
+		try {
+			int size=scan.nextInt();
+			int array[]=new int[size];
+			for(int i=0;i<size;i++) {
+				System.out.println("Please enter the "+(i+1)+"th element of array:");
+				array[i]=scan.nextInt();
+			}
+			
+			int freq[]=new int[size];
+			
+			for(int i=0;i<size;i++) {
+				freq[array[i]]++;
+			}
+			for(int i=0;i<size;i++) {
+				if(freq[i]==1) {
+					System.out.print(array[i]+" ");
+				}
+			}
+			
+		}catch(Exception e) {
+			System.err.print(e.getMessage());
+		}
+		scan.close();
+	}
+
+}

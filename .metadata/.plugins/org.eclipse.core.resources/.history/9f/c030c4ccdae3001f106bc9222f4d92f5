@@ -1,0 +1,57 @@
+package practice;
+import java.util.*;
+//Program to print product of 2 matrix 
+public class PracticeMatrix1 {
+	//Created method/function for doing product of matrix:
+	public static int[][] Prod(int arr1[][], int arr2[][], int size){
+		int arr3[][]=new int[size][size];
+		for(int i=0;i<size;i++) {
+			for(int j=0;j<size;j++) {
+				arr3[i][j]= (arr1[i][j])* (arr2[i][j]);
+			}
+		}
+		
+		return arr3;
+	}
+	public static void main(String args[]) {
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Pleaes enter the size of matrix:");
+		try {
+			int size=scan.nextInt();
+			int arr1[][]=new int[size][size];
+			int arr2[][]=new int[size][size];
+			//taking input for first array:
+			System.out.println("Please enter the element for 1st array:");
+			for(int i=0;i<size;i++) {
+				for(int j=0;j<size;j++) {
+					System.out.println("Plesae enter the ("+i+","+j+") element of array:");
+					arr1[i][j]=scan.nextInt();
+				}
+			}
+			
+			//taking input for 2nd array:
+			System.out.println("Please enter the element for 2nd array:");
+			for(int i=0;i<size;i++) {
+				for(int j=0;j<size;j++) {
+					System.out.println("Plesae enter the ("+i+","+j+") element of array:");
+					arr2[i][j]=scan.nextInt();
+				}
+			}
+			//calling function to get new matrix with product of array's element:
+			int arr3[][]=Prod(arr1,arr2,size);
+			
+			//Printing the new array which contains the product of these 2 arrays:
+			for(int i=0;i<size;i++) {
+				for(int j=0;j<size;j++) {
+					System.out.print(arr3[i][j]);
+					
+				}
+				System.out.println();
+			}
+		}catch(Exception e) {
+			System.err.print(e.getMessage());
+		}
+		
+	}
+
+}
