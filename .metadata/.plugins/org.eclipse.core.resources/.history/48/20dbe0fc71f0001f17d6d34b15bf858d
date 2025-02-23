@@ -1,0 +1,32 @@
+package practice;
+import java.util.*;
+public class MultiplicationOfMatrix {
+	/*
+	 * Main Program starts from here:
+	 */
+	public static void main (String args[]) {
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Please Enter the Row size for 1st matrix: ");
+		int Row1=scan.nextInt();
+		System.out.println("Please Enter the Column size for 1st matrix: ");
+		int Col1=scan.nextInt();
+		System.out.println("Please Enter the Row size for 2nd matrix: ");
+		int Row2=scan.nextInt();
+		System.out.println("Please Enter the Column size for 2nd matrix: ");
+		int Col2=scan.nextInt();
+		
+		if(Col1 == Row2) {
+			
+		}
+		else {
+			System.out.println("Multiplication of given matrix size isn't possible: ");
+			System.out.println(" Note: //n Mutliplcation of 2 matrix is only possible if and only if column size of 1st matrix is equal to row size of 2nd matrix.");
+			
+		}
+		
+		
+		scan.close();
+		
+		
+	}
+}
